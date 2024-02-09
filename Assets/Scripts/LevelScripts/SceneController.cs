@@ -1,19 +1,18 @@
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace LevelScripts
 {
-    public class SceneController : MonoBehaviour
+    public static class SceneController
     {
-        public void LoadTitleScreen()
+        public static void LoadTitleScreen()
         {
             SceneManager.LoadScene("TitleScene", LoadSceneMode.Single);
         }
-        public void LoadScoreScreen()
+        public static void LoadScoreScreen()
         {
             SceneManager.LoadScene("ScoreScene", LoadSceneMode.Single);
         }
-        public void LoadGameScene()
+        public static void LoadGameScene()
         {
             SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
         }

@@ -4,9 +4,9 @@ public class scoreingAndDeactivating : MonoBehaviour
 {
     public static int score;
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("smule"))
+        if (other.gameObject.CompareTag("Smule"))
         {
             other.gameObject.SetActive(false);
             score += 50;

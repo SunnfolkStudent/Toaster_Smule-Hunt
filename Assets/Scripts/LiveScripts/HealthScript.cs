@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using LevelScripts;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -40,13 +41,14 @@ public class HealthScript : MonoBehaviour
             canTakeDamage = true;
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("SuckHazard"))
+        if (other.gameObject.CompareTag("SuckHazard"))
         {
             TakeDamage();
+            other.gameObject.SetActive(false);
         }
-        if (other.CompareTag("Heart"))
+        if (other.gameObject.CompareTag("Heart"))
         {
             if (lives >= maxLives) return;
             lives++;
@@ -61,12 +63,12 @@ public class HealthScript : MonoBehaviour
     {
         if (!canTakeDamage) return;
         lives -= 1;
-        hurtSoundEffect.Play();
+        //hurtSoundEffect.Play();
         SetHealthUI();
         
         if (lives <= 0)
         {
-            //_sceneController.Reset();
+            SceneController.LoadScoreScreen();
         }
 
         canTakeDamage = false;
@@ -79,7 +81,7 @@ public class HealthScript : MonoBehaviour
         {
             if (i < lives)
             {
-                hearts[i].color = new Color(1, 1, 1, 1);
+                hearts[i].color = new Color(1, 0, 0, 1);
             }
             else
             {
