@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -18,6 +19,7 @@ public class SmuleSpawner : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(IDecreasTime());
         objectPooling = ObjectPooling.Instance;
     }
     
@@ -44,9 +46,17 @@ public class SmuleSpawner : MonoBehaviour
     private void SpawnHazard()
     {
         _timer2 += Time.deltaTime;
-        _spawnRateHazard = Mathf.Lerp(_minSpawnRateHazard, _maxSpawnRateHazard, _animationCurve.Evaluate(_timer2));
-        /*if (!(_timer2 >= _spawnRateHazard)) return;
-        _timer2 = 0;*/
+        //_spawnRateHazard = Mathf.Lerp(_minSpawnRateHazard, _maxSpawnRateHazard, _animationCurve.Evaluate(_timer2));
+        if (!(_timer2 >= _spawnRateHazard)) return;
+        _timer2 = 0;
         objectPooling.SpawnFormPool("hazard", FindRandomPosition(), Quaternion.identity);
+    }
+    private IEnumerator IDecreasTime()
+    {
+        while (true)
+        {
+            _spawnRateHazard /= 1.01f;
+            yield return new WaitForSeconds(1);
+        }
     }
 }
