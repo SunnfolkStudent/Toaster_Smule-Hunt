@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class HealthScript : MonoBehaviour
@@ -19,8 +19,8 @@ public class HealthScript : MonoBehaviour
     public AudioClip[] hurtClips;
     public AudioClip[] pickupClips;
     //private SceneController _sceneController;
-
-    private GameObject[] Hearts;
+    public Image[] hearts;
+   // private GameObject[] Hearts;
     
     [SerializeField] private AudioSource hurtSoundEffect;
     
@@ -29,6 +29,9 @@ public class HealthScript : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         //_sceneController = GetComponent<SceneController>();
     }
+    
+   
+    
 
     private void Update()
     {
@@ -39,20 +42,19 @@ public class HealthScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Heart"))
-        {
-            if (lives >= maxLives) return;
-            lives++;
-            Destroy(other.gameObject);
-        }
-    }
-    private void OnTriggerStay2D(Collider2D other)
-    {
         if (other.CompareTag("DamageZone"))
         {
             TakeDamage();
         }
+        if (other.CompareTag("Heart"))
+        {
+            if (lives >= maxLives) return;
+            lives++;
+            SetHealthUI();
+            Destroy(other.gameObject);
+        }
     }
+  
 
     public void TakeDamage()
     //Gå gjennom array med forloop uten gameobject.find! (Setactive to false or destroy?)
@@ -60,11 +62,7 @@ public class HealthScript : MonoBehaviour
         if (!canTakeDamage) return;
         lives -= 1;
         hurtSoundEffect.Play();
-        //or (int i = 0; i < hearts.Length; i++)
-        {
-            //hearts[i].color = i < _target.lives ? new Color(1,1,1,1) : new Color(1, 1, 1, 0.1f);
-        }
-
+        SetHealthUI();
         
         if (lives <= 0)
         {
@@ -73,5 +71,20 @@ public class HealthScript : MonoBehaviour
 
         canTakeDamage = false;
         canTakeDamageCounter = Time.time + canTakeDamageTime;
+    }
+
+    private void SetHealthUI()
+    {
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < lives)
+            {
+                hearts[i].color = new Color(1, 1, 1, 1);
+            }
+            else
+            {
+                hearts[i].color = new Color(1, 1, 1, 0.1f);
+            }
+        }
     }
 }
