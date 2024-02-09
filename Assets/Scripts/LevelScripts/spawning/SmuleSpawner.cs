@@ -27,7 +27,7 @@ public class SmuleSpawner : MonoBehaviour
 
     private Vector3 FindRandomPosition()
     {
-        var randomPos = new Vector3(Random.Range(-9, 9), Random.Range(-5, 5), 0);
+        var randomPos = new Vector3(Random.Range(-14, 14), Random.Range(-8, 8), 0);
         return randomPos;
     }
 
