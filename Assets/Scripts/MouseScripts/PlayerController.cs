@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace MouseScripts
 {
-    public class MouseMovement : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()
