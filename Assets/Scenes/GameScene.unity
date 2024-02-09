@@ -2077,8 +2077,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be2882bfaf25094f80083ab49a4d917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnRate: 1
+  _spawnRateSmule: 1
   _spawnRateHazard: 2
+  _minSpawnRateHazard: 0
   _maxSpawnRateHazard: 0
   _animationCurve:
     serializedVersion: 2
@@ -2649,8 +2650,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8723203755386283775, guid: e0c0fa6dd47af464486401361f862d5a, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5bf4b44a1e2a293458069c95e7da4fee, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: ad3feb9fb65f9944eba55c12dd8ccb5a, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
