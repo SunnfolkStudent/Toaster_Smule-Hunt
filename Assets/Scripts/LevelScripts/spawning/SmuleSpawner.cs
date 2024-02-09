@@ -5,6 +5,9 @@ public class SmuleSpawner : MonoBehaviour
 {
     [SerializeField] private float _spawnRate;
     [SerializeField] private float _spawnRateHazard;
+    [SerializeField] private float _maxSpawnRateHazard;
+
+    [SerializeField] private AnimationCurve _animationCurve;
     
     ObjectPooling objectPooling;
     
@@ -38,6 +41,7 @@ public class SmuleSpawner : MonoBehaviour
 
     private void SpawnHazard()
     {
+        _spawnRateHazard = Mathf.Lerp(0, _maxSpawnRateHazard, _animationCurve.Evaluate(_timer2));
         _timer2 += Time.deltaTime;
         if (!(_timer2 >= _spawnRateHazard)) return;
         _timer2 = 0;
