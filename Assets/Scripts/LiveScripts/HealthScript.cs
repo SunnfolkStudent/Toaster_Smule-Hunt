@@ -42,7 +42,7 @@ public class HealthScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("DamageZone"))
+        if (other.CompareTag("SuckHazard"))
         {
             TakeDamage();
         }
