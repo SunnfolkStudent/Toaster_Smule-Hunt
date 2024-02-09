@@ -1,0 +1,785 @@
+fileFormatVersion: 2
+guid: 55f33ba65dcce9d4d8573cb4a04d18be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8967973337038899105
+    second: TitleScreenPoster_0
+  - first:
+      213: 7686828504740762485
+    second: TitleScreenPoster_1
+  - first:
+      213: -824900829898582896
+    second: TitleScreenPoster_2
+  - first:
+      213: -1608779442363738501
+    second: TitleScreenPoster_3
+  - first:
+      213: 6171376592770623541
+    second: TitleScreenPoster_4
+  - first:
+      213: -6287194463106533498
+    second: TitleScreenPoster_5
+  - first:
+      213: 797323995480042099
+    second: TitleScreenPoster_6
+  - first:
+      213: 8123542695575704030
+    second: TitleScreenPoster_7
+  - first:
+      213: 855249073314885941
+    second: TitleScreenPoster_8
+  - first:
+      213: 2522461680919693273
+    second: TitleScreenPoster_9
+  - first:
+      213: -8442859142049341211
+    second: TitleScreenPoster_10
+  - first:
+      213: 3056056834991957159
+    second: TitleScreenPoster_11
+  - first:
+      213: -4528775933040391177
+    second: TitleScreenPoster_12
+  - first:
+      213: 3349764673713436449
+    second: TitleScreenPoster_13
+  - first:
+      213: -4609274265073792590
+    second: TitleScreenPoster_14
+  - first:
+      213: 8595301429725405498
+    second: TitleScreenPoster_15
+  - first:
+      213: 8828800255994327356
+    second: TitleScreenPoster_16
+  - first:
+      213: -8591213067523580388
+    second: TitleScreenPoster_17
+  - first:
+      213: -8993430001857074676
+    second: TitleScreenPoster_18
+  - first:
+      213: -9172100214848013913
+    second: TitleScreenPoster_19
+  - first:
+      213: -7627087642806331377
+    second: TitleScreenPoster_20
+  - first:
+      213: -3501894419846498648
+    second: TitleScreenPoster_21
+  - first:
+      213: 8931090400693025598
+    second: TitleScreenPoster_22
+  - first:
+      213: 3368841292567905244
+    second: TitleScreenPoster_23
+  - first:
+      213: -2002457889293341199
+    second: TitleScreenPoster_24
+  - first:
+      213: -4818425269240718683
+    second: TitleScreenPoster_25
+  - first:
+      213: -285246048630153074
+    second: TitleScreenPoster_26
+  - first:
+      213: 4652140622333814482
+    second: TitleScreenPoster_27
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TitleScreenPoster_0
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 719
+        width: 222
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a7c0655c34a47c70800000000000000
+      internalID: 8967973337038899105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_1
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 759
+        width: 116
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5739b6a6cc91daa60800000000000000
+      internalID: 7686828504740762485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_2
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 820
+        width: 144
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09458f2d01d5d84f0800000000000000
+      internalID: -824900829898582896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_3
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 977
+        width: 55
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7655ffee977ca9e0800000000000000
+      internalID: -1608779442363738501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_4
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 932
+        width: 94
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 538e043505225a550800000000000000
+      internalID: 6171376592770623541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_5
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 956
+        width: 80
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6877bb062f56fb8a0800000000000000
+      internalID: -6287194463106533498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_6
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 794
+        width: 176
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37aab7113f9a01b00800000000000000
+      internalID: 797323995480042099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_7
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 790
+        width: 135
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed1528f8a0f9cb070800000000000000
+      internalID: 8123542695575704030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_8
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 822
+        width: 114
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5317a6930847edb00800000000000000
+      internalID: 855249073314885941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_9
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 872
+        width: 110
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d7c0c2c885910320800000000000000
+      internalID: 2522461680919693273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_10
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 734
+        width: 275
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e06d7da750f4da80800000000000000
+      internalID: -8442859142049341211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_11
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 482
+        width: 76
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4a91fef7b496a20800000000000000
+      internalID: 3056056834991957159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_12
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 508
+        width: 196
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fb0acb884e8621c0800000000000000
+      internalID: -4528775933040391177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_13
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 562
+        width: 177
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12777d11931cc7e20800000000000000
+      internalID: 3349764673713436449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_14
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 526
+        width: 52
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b94de51a719800c0800000000000000
+      internalID: -4609274265073792590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_15
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 553
+        width: 318
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a31a0384c15a84770800000000000000
+      internalID: 8595301429725405498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_16
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 544
+        width: 207
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c317b6b4e03368a70800000000000000
+      internalID: 8828800255994327356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_17
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 77
+        width: 382
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1e1098bb31e5c880800000000000000
+      internalID: -8591213067523580388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_18
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 31
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ae7f2001be03380800000000000000
+      internalID: -8993430001857074676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_19
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 31
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a933b1537726b080800000000000000
+      internalID: -9172100214848013913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_20
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 31
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f08d1cbe234272690800000000000000
+      internalID: -7627087642806331377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_21
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 31
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a670283495c66fc0800000000000000
+      internalID: -3501894419846498648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_22
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 31
+        width: 45
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b7536866b91fb70800000000000000
+      internalID: 8931090400693025598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_23
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 31
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd38d248e4780ce20800000000000000
+      internalID: 3368841292567905244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_24
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 31
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fdedfeb827d534e0800000000000000
+      internalID: -2002457889293341199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_25
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 31
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa142a2fb3812db0800000000000000
+      internalID: -4818425269240718683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_26
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 31
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80e0d5ea3a9a0cf0800000000000000
+      internalID: -285246048630153074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleScreenPoster_27
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 31
+        width: 45
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d62f577f39bf8040800000000000000
+      internalID: 4652140622333814482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Item Check Order List_0: 2899644329917058218
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
