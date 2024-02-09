@@ -1,6 +1,7 @@
-using System;
+/*using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -12,30 +13,57 @@ namespace MouseScripts
         public float viewRadius = 15;
         [Range(1, 360)] public float angle = 45;
         
-        public LayerMask targetLayer;
+        public LayerMask smuleLayer;
         public LayerMask obstacleLayer;
-
-        private GameObject _player;
-        private bool CanSeeSmule { get; set; }
+        public bool CanSeeSmule { get; set; }
+        
+        [HideInInspector] public List<Transform> visibleSmuler = new List<Transform>();
 
         private void Start()
         {
-            _player = GameObject.FindGameObjectWithTag("Player");
-            StartCoroutine(FOVCheck());
+            StartCoroutine(FOVCheck(0.1f));
         }
 
-        private IEnumerator FOVCheck()
+        private IEnumerator FOVCheck(float delay)
         {
-            WaitForSeconds wait = new WaitForSeconds(0.2f);
-
             while (true)
             {
-                yield return wait;
-                FOV();
+                yield return new WaitForSeconds(delay);
+                FindVisibleSmuler();
+            }
+        }
+        
+        private void FindVisibleSmuler()
+        {
+            visibleSmuler.Clear();
+            int maxSmulerInView = 10;
+            Collider[] smulerInViewRadius = new Collider[maxSmulerInView];
+            var smulerInFOV = Physics.OverlapSphereNonAlloc(transform.position, viewRadius, smulerInViewRadius,
+                smuleLayer);
+
+            for (int i = 0; i < smulerInFOV; i++)
+            {
+                Transform smule = smulerInViewRadius[i].transform;
+                Vector3 dirToSmule = (smule.position - transform.position).normalized;
+                if (Vector3.Angle(transform.forward, dirToSmule) < angle / 2)
+                {
+                    float distanceToSmule = Vector3.Distance(transform.position, smule.position);
+
+                    if (!Physics.Raycast(transform.position, dirToSmule, distanceToSmule, obstacleLayer))
+                    {
+                        visibleSmuler.Add(smule);
+                        Debug.Log("Smule Detected");
+                        CanSeeSmule = true;
+                    }
+                    else
+                    {
+                        CanSeeSmule = false;
+                    }
+                }
             }
         }
 
-        private void FOV()
+        /*private void FOV()
         {
             Collider2D[] rangeCheck = Physics2D.OverlapCircleAll(transform.position, viewRadius, targetLayer);
 
@@ -47,19 +75,24 @@ namespace MouseScripts
                 if (Vector2.Angle(transform.up, directionToTarget) < angle / 2)
                 {
                     float distanceToTarget = Vector2.Distance(transform.position, target.position);
-
-                    CanSeeSmule = !Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstacleLayer);
+                    if (!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstacleLayer))
+                    {
+                        CanSeeSmule = true;
+                    }
+                    else
+                    {
+                        CanSeeSmule = false;
+                    }
                 }
-
-                CanSeeSmule = false;
+                else CanSeeSmule = false;
             }
             else if (CanSeeSmule)
             {
                 CanSeeSmule = false;
             }
-        }
+        }#1#
 
-        private void OnDrawGizmos()
+        /*private void OnDrawGizmos()
         {
             Gizmos.color = Color.white;
             var transform1 = transform;
@@ -77,13 +110,20 @@ namespace MouseScripts
 
             if (!CanSeeSmule) return;
             Gizmos.color = Color.green;
-            Gizmos.DrawLine(position, _player.transform.position);
-        }
-        private Vector2 DirectionFromAngle(float eulerY, float angleInDegrees)
+            foreach (var visibleSpawnArea in .visibleSpawnAreas)
+            {
+                Handles.DrawLine(fov.transform.position, visibleSpawnArea.position);
+            }
+        }#1#
+        public Vector3 DirectionFromAngle(float eulerY, bool angleIsGlobal)
         {
-            angleInDegrees += eulerY;
+            if (!angleIsGlobal)
+            {
+                eulerY += transform.eulerAngles.y;
+            }
+            // angleInDegrees += eulerY;
 
-            return new Vector2(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
+            return new Vector3(Mathf.Sin(eulerY * Mathf.Deg2Rad), Mathf.Cos(eulerY * Mathf.Deg2Rad));
         }
     }
-}
+}*/
