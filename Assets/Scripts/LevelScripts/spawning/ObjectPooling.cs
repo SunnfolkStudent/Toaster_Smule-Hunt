@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,16 +12,30 @@ public class ObjectPooling : MonoBehaviour
         public GameObject prefab;
         public int size;
     }
+    
+    #region
+    public static ObjectPooling Instance;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+    #endregion
+    
     public List<Pool> pools;
-    public Dictionary<string, Queue<GameObject>> poolDictionary;
+    private Dictionary<string, Queue<GameObject>> poolDictionary;
+    
+    [SerializeField]private float _disappearTime = 2;
 
     private void Start()
     {
+        StartCoroutine(IDecreasDisappearTime());
+        poolDictionary = new Dictionary<string, Queue<GameObject>>();
+        
         foreach (Pool pool in pools)
         {
             Queue<GameObject> objectPool = new Queue<GameObject>();
-
+            
             for (int i = 0; i < pool.size; i++)
             {
                 GameObject obj = Instantiate(pool.prefab);
@@ -29,10 +44,9 @@ public class ObjectPooling : MonoBehaviour
             }
             poolDictionary.Add(pool.tag, objectPool);
         }
-        poolDictionary = new Dictionary<string, Queue<GameObject>>();
     }
 
-    private GameObject SpawnFormPool(string tag, Vector3 position, Quaternion rotation)
+    public GameObject SpawnFormPool(string tag, Vector3 position, Quaternion rotation)
     {
         if (!poolDictionary.ContainsKey(tag))
         {
@@ -44,9 +58,31 @@ public class ObjectPooling : MonoBehaviour
         objectToSpawn.SetActive(true);
         objectToSpawn.transform.position = position;
         objectToSpawn.transform.rotation = rotation;
+        StartCoroutine(DeActivate()); 
         
-        poolDictionary[tag].Enqueue(objectToSpawn);
+        IPooledObjekt pooledObj = objectToSpawn.GetComponent<IPooledObjekt>();
 
+        if (pooledObj != null)
+        {
+            pooledObj.OnObjectSpawn();
+        }
+        
+        poolDictionary[tag].Enqueue(objectToSpawn); 
+        
+        IEnumerator DeActivate()
+        {
+            yield return new WaitForSeconds(_disappearTime);
+            objectToSpawn.SetActive(false);
+        }
         return objectToSpawn;
+    }
+
+    private IEnumerator IDecreasDisappearTime()
+    {
+        while (true)
+        {
+            _disappearTime /= 1.01f;
+            yield return new WaitForSeconds(1);
+        }
     }
 }
