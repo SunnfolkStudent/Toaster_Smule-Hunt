@@ -1,4 +1,4 @@
-using UnityEditor;
+/*using UnityEditor;
 using UnityEngine;
 
 namespace MouseScripts
@@ -11,9 +11,9 @@ namespace MouseScripts
             FieldOfView fov = (FieldOfView)target;
             Handles.color = Color.magenta;
             var fovPosition = fov.transform.position;
-            Handles.DrawWireArc(fovPosition, Vector3.up, Vector3.forward, 360, fov.viewRadius);
-            Vector3 viewAngleA = fov.DirFromAngle(-fov.viewAngle / 2, false);
-            Vector3 viewAngleB = fov.DirFromAngle(fov.viewAngle / 2, false);
+            Handles.DrawWireArc(fovPosition, Vector2.up, Vector3.forward, 360, fov.viewRadius);
+            Vector2 viewAngleA = fov.DirFromAngle(-fov.angle / 2, false);
+            Vector2 viewAngleB = fov.DirFromAngle(fov.angle / 2, false);
             
             Handles.DrawLine(fovPosition, fovPosition + viewAngleA * fov.viewRadius);
             Handles.DrawLine(fovPosition, fovPosition + viewAngleB * fov.viewRadius);
@@ -25,4 +25,4 @@ namespace MouseScripts
             }
         }
     }
-}
+}*/

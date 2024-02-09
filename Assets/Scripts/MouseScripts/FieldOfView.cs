@@ -1,65 +1,89 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace MouseScripts
 {
     public class FieldOfView : MonoBehaviour
     {
         public float viewRadius = 15;
-        [Range(0, 360)] public float viewAngle = 92;
+        [Range(1, 360)] public float angle = 45;
+        
+        public LayerMask targetLayer;
+        public LayerMask obstacleLayer;
 
-        // TODO: Turn into smuleAreaMask & ObstacleMask
-        public LayerMask spawnAreaMask;
-        public LayerMask obstacleMask;
-
-        [HideInInspector] public List<Transform> visibleSpawnAreas = new List<Transform>();
+        private GameObject _player;
+        private bool CanSeeSmule { get; set; }
 
         private void Start()
         {
-            StartCoroutine(FindSpawnAreaWithDelay(0.1f));
+            _player = GameObject.FindGameObjectWithTag("Player");
+            StartCoroutine(FOVCheck());
         }
-        
-        IEnumerator FindSpawnAreaWithDelay(float delay)
+
+        private IEnumerator FOVCheck()
         {
+            WaitForSeconds wait = new WaitForSeconds(0.2f);
+
             while (true)
             {
-                yield return new WaitForSeconds(delay);
-                FindVisibleSpawnAreas();
+                yield return wait;
+                FOV();
             }
         }
-        
-        private void FindVisibleSpawnAreas()
-        {
-            visibleSpawnAreas.Clear();
-            int maxSpawnAreasInView = 10;
-            Collider[] spawnAreasInViewRadius = new Collider[maxSpawnAreasInView];
-            var spawnAreasInFOV = Physics.OverlapSphereNonAlloc(transform.position, viewRadius, spawnAreasInViewRadius,
-                spawnAreaMask);
 
-            for (int i = 0; i < spawnAreasInFOV; i++)
+        private void FOV()
+        {
+            Collider2D[] rangeCheck = Physics2D.OverlapCircleAll(transform.position, viewRadius, targetLayer);
+
+            if (rangeCheck.Length > 0)
             {
-                Transform spawnArea = spawnAreasInViewRadius[i].transform;
-                Vector3 dirToSpawnArea = (spawnArea.position - transform.position).normalized;
-                if (Vector3.Angle(transform.forward, dirToSpawnArea) < viewAngle / 2)
+                Transform target = rangeCheck[0].transform;
+                Vector2 directionToTarget = (target.position - transform.position).normalized;
+
+                if (Vector2.Angle(transform.up, directionToTarget) < angle / 2)
                 {
-                    float distanceToSpawnArea = Vector3.Distance(transform.position, spawnArea.position);
+                    float distanceToTarget = Vector2.Distance(transform.position, target.position);
 
-                    if (!Physics.Raycast(transform.position, dirToSpawnArea, distanceToSpawnArea, obstacleMask))
-                    {
-                        visibleSpawnAreas.Add(spawnArea);
-                        // Debug.Log("SpawnArea Detected");
-                    }
+                    CanSeeSmule = !Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstacleLayer);
                 }
+
+                CanSeeSmule = false;
+            }
+            else if (CanSeeSmule)
+            {
+                CanSeeSmule = false;
             }
         }
-        public Vector3 DirFromAngle(float angleInDegrees, bool angleIsGlobal)
+
+        private void OnDrawGizmos()
         {
-            if (!angleIsGlobal)
-            {
-                angleInDegrees += transform.eulerAngles.y;
-            }
-            return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), 0, Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
+            Gizmos.color = Color.white;
+            var transform1 = transform;
+            var position = transform1.position;
+            var eulerAngles = transform1.eulerAngles;
+            
+            UnityEditor.Handles.DrawWireDisc(position, Vector3.forward, viewRadius);
+           
+            Vector3 angle01 = DirectionFromAngle(-eulerAngles.z, -angle / 2);
+            Vector3 angle02 = DirectionFromAngle(-eulerAngles.z, angle / 2);
+            
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawLine(position, position  + angle01 * viewRadius);
+            Gizmos.DrawLine(position, position  + angle02 * viewRadius);
+
+            if (!CanSeeSmule) return;
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(position, _player.transform.position);
+        }
+        private Vector2 DirectionFromAngle(float eulerY, float angleInDegrees)
+        {
+            angleInDegrees += eulerY;
+
+            return new Vector2(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
         }
     }
 }
