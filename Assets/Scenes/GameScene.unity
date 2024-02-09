@@ -2620,7 +2620,7 @@ MonoBehaviour:
   canTakeDamage: 0
   canTakeDamageTime: 0.1
   canTakeDamageCounter: 0
-  hurtClips: []
+  hurtClip: {fileID: 1087456616}
   pickupClips: []
   hearts:
   - {fileID: 1966294224}

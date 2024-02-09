@@ -17,7 +17,7 @@ public class HealthScript : MonoBehaviour
     public float canTakeDamageCounter;
 
     private AudioSource _audioSource;
-    public AudioClip[] hurtClips;
+    public AudioSource hurtClip;
     public AudioClip[] pickupClips;
     //private SceneController _sceneController;
     public Image[] hearts;
@@ -63,7 +63,7 @@ public class HealthScript : MonoBehaviour
     {
         if (!canTakeDamage) return;
         lives -= 1;
-        //hurtSoundEffect.Play();
+        hurtClip.Play(0);
         SetHealthUI();
         
         if (lives <= 0)
