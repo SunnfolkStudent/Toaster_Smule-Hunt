@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MouseScripts
+namespace MouseScripts.Movement___Input
 {
     [RequireComponent(typeof(PlayerController), typeof(Rigidbody2D))]
     public class PlayerMovement : MonoBehaviour

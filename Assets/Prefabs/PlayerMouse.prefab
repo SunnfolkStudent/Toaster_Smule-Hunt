@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 1616251611321487804}
   - component: {fileID: 928362073002022720}
   - component: {fileID: 7390968999420278778}
-  - component: {fileID: 4684536629209812809}
   m_Layer: 0
   m_Name: PlayerMouse
   m_TagString: Player
@@ -203,16 +202,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
---- !u!114 &4684536629209812809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3510570774674126571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1dedea2ad9489249837ecbb022713e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pools: []

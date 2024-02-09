@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace MouseScripts
+namespace MouseScripts.Movement___Input
 {
     [RequireComponent(typeof(PlayerMovement), typeof(PlayerInput), typeof(PlayerAnimations))]
     public class PlayerController : MonoBehaviour

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MouseScripts
+namespace MouseScripts.Movement___Input
 {
     public class PlayerInput : MonoBehaviour
     {
