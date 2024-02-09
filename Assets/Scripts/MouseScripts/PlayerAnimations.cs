@@ -3,15 +3,13 @@ using UnityEngine;
 
 namespace MouseScripts
 {
-    public class PlayerAnimations : PlayerController
+    public class PlayerAnimations : MonoBehaviour
     {
-        private PlayerInput _playerInput;
-        
-        public Animator anim;
+        // public Animator anim;
         private Transform _transform;
     
         private string _direction;
-        private Vector2 _directionValue;
+        // internal Vector2 DirectionValue;
         private Vector2 _lastPosition; 
     
         // Start is called before the first frame update
@@ -55,7 +53,7 @@ namespace MouseScripts
             anim.Play(unitAnimation + _direction);
         }*/
         
-        private void MouseAnimationUpdate()
+        internal void MouseAnimationUpdate(Vector2 input)
         {
             /*if (_playerInput.Movement.sqrMagnitude > 0.1)
             {
@@ -66,7 +64,7 @@ namespace MouseScripts
                 anim.Play("idle",0);
             }*/
 
-            switch (_playerInput.Movement)
+            switch (input)
             {
                 case { x: 0, y: > 0 }:
                     _transform.eulerAngles = new Vector3(0, 0, 0);

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace MouseScripts
 {
-    public class PlayerInput : PlayerController
+    public class PlayerInput : MonoBehaviour
     {
         private PlayerControls _controls;
         private void Awake() => _controls = new PlayerControls();
