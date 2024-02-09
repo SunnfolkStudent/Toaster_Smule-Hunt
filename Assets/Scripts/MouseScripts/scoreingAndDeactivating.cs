@@ -11,5 +11,10 @@ public class scoreingAndDeactivating : MonoBehaviour
             other.gameObject.SetActive(false);
             score += 50;
         }
+
+        if (other.gameObject.CompareTag("SuckHazard"))
+        {
+            print("takeDamage");
+        }
     }
 }
