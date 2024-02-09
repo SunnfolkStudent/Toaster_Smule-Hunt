@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 372523848}
   - component: {fileID: 372523847}
   - component: {fileID: 372523846}
+  - component: {fileID: 372523850}
   m_Layer: 0
   m_Name: PlayerMouse
   m_TagString: Player
@@ -261,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e61a1143ddd577944a41629d714b2e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 5
 --- !u!114 &372523847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +323,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &372523850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372523841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1dedea2ad9489249837ecbb022713e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
